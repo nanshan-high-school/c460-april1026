@@ -3,9 +3,9 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    int race1[n/3][3] = {0};
-    int race2[n/3][3] = {0};
-    int race3[n/3][3] = {0};
+    int race1[n][3] = {0};
+    int race2[n][3] = {0};
+    int race3[n][3] = {0};
     
     int r1 = 0, r2 = 0, r3 = 0;
     for (int i = 0; i < n; i++) {
@@ -24,9 +24,9 @@ int main() {
     }
     
     int ways = 0;
-    for (int i = 0; i < (n/3); i++) { //race1[i]
-        for (int j = 0; j < (n/3); j++) { //race2[j]
-            for (int k = 0; k < (n/3); k++) { //race3[k]
+    for (int i = 0; i < r1; i++) { //race1[i]
+        for (int j = 0; j < r2; j++) { //race2[j]
+            for (int k = 0; k < r3; k++) { //race3[k]
                 bool a = 0, b = 0, c = 0;
                 if (race1[i][0]  == 1 || race2[j][0]  == 1|| race3[k][0] == 1) {
                     a = 1;
